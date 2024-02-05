@@ -17,7 +17,7 @@ const ServicesSection = () => {
             <div className="icon">
               <img
                 src={clock}
-                alt=""
+                alt="icon"
               />
               <h3>Efficient</h3>
             </div>
@@ -30,7 +30,7 @@ const ServicesSection = () => {
             <div className="icon">
               <img
                 src={teamwork}
-                alt=""
+                alt="icon"
               />
               <h3>Teamwork</h3>
             </div>
@@ -43,7 +43,7 @@ const ServicesSection = () => {
             <div className="icon">
               <img
                 src={diaphragm}
-                alt=""
+                alt="icon"
               />
               <h3>Hot Cameras</h3>
             </div>
@@ -56,7 +56,7 @@ const ServicesSection = () => {
             <div className="icon">
               <img
                 src={money}
-                alt=""
+                alt="icon"
               />
               <h3>Affordable</h3>
             </div>
@@ -70,7 +70,7 @@ const ServicesSection = () => {
       <div className="image">
         <img
           src={home2}
-          alt=""
+          alt="camera"
         />
       </div>
     </div>
