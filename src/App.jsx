@@ -1,13 +1,37 @@
 import AboutUs from "./pages/AboutUs";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
+import ContactUs from "./pages/ContactUs";
+import OurWork from "./pages/OurWork";
+import {
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Nav />
-      <AboutUs />
+      <Routes>
+        <Route
+          path="/"
+          element={<AboutUs />}
+        ></Route>
+        <Route
+          path="ourwork"
+          element={<OurWork />}
+        />
+        <Route
+          path="contact"
+          element={<ContactUs />}
+        />
+        <Route
+          path="*"
+          element={<Navigate to="/" />}
+        />
+      </Routes>
     </>
   );
 }
