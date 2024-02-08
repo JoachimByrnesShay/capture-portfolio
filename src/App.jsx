@@ -2,6 +2,7 @@ import AboutUs from "./pages/AboutUs";
 import GlobalStyle from "./components/GlobalStyle";
 import Nav from "./components/Nav";
 import ContactUs from "./pages/ContactUs";
+import MovieDetail from "./pages/MovieDetail";
 import OurWork from "./pages/OurWork";
 import {
   Route,
@@ -20,12 +21,16 @@ function App() {
           element={<AboutUs />}
         ></Route>
         <Route
-          path="ourwork"
+          path="/work"
           element={<OurWork />}
         />
         <Route
-          path="contact"
+          path="/contact"
           element={<ContactUs />}
+        />
+        <Route
+          path="/work/:id"
+          element={<MovieDetail />}
         />
         <Route
           path="*"
