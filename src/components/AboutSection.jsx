@@ -7,6 +7,11 @@ import {
   Hide,
 } from "../styles.js";
 import { motion } from "framer-motion";
+import {
+  titleAnim,
+  fade,
+  photoAnim,
+} from "../animation.js";
 
 const AboutSection = () => {
   // const titleAnim = {
@@ -38,21 +43,23 @@ const AboutSection = () => {
         >
           <Hide>
             <motion.h2
-            // animate={{
-            //   opacity: 1,
-            //   transition: {
-            //     duration: 5,
-            //   },
-            // }}
-            // initial={{ opacity: 0 }}
-            // variants={titleAnim}
+              variants={titleAnim}
+              // animate={{
+              //   opacity: 1,
+              //   transition: {
+              //     duration: 5,
+              //   },
+              // }}
+              // initial={{ opacity: 0 }}
+              // variants={titleAnim}
             >
               We work to make{" "}
             </motion.h2>
           </Hide>
           <Hide>
             <motion.h2
-            // variants={titleAnim}
+              variants={titleAnim}
+              // variants={titleAnim}
             >
               your <span>dreams</span>{" "}
               come
@@ -60,24 +67,28 @@ const AboutSection = () => {
           </Hide>
           <Hide>
             <motion.h2
-            // variants={titleAnim}
+              variants={titleAnim}
+              // variants={titleAnim}
             >
               true.{" "}
             </motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Contact us for any photography
           or videography needs that you
           have. We are YOUR skilled
           professionals.
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>
+          Contact Us
+        </motion.button>
       </Description>
       <StyledImage>
-        <img
+        <motion.img
           src={home1}
           alt="guy wth a camera"
+          variants={photoAnim}
         />
       </StyledImage>
     </StyledAbout>
