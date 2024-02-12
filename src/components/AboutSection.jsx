@@ -90,6 +90,9 @@ const AboutSection = () => {
           src={home1}
           alt="guy wth a camera"
           variants={photoAnim}
+          initial="hidden"
+          animate="show"
+          // can reset the initial and animate here to break the image out of the staggering that is set on the parent element
         />
       </StyledImage>
       <Wave />
