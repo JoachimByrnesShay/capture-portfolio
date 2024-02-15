@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledAbout } from "../styles.js";
+import Toggle from "./Toggle";
 
 const FaqSection = (props) => {
   return (
@@ -7,20 +8,25 @@ const FaqSection = (props) => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How do I start?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor, sit amet{" "}
-          </p>
 
-          <p>
-            consectetur adipisicing
-            elit. Harum fugit{" "}
-          </p>
-        </div>
-        <div className="faq-line"></div>
+      <div className="question">
+        <Toggle>
+          <h4>How do I start?</h4>
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor, sit
+              amet{" "}
+            </p>
+
+            <p>
+              consectetur adipisicing
+              elit. Harum fugit{" "}
+            </p>
+          </div>
+          <div className="faq-line"></div>
+        </Toggle>
       </div>
+
       <div className="question">
         <h4>Daily Schedule</h4>
         <div className="answer">
