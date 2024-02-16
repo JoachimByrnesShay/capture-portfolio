@@ -6,11 +6,22 @@ import {
   motion,
   AnimatePresence,
 } from "framer-motion";
-import { fade } from "../animation";
-
+import {
+  fade,
+  fade2,
+  scrollReveal,
+} from "../animation";
+import { useScroll } from "./UseScroll";
 const FaqSection = (props) => {
+  const [element, controls] =
+    useScroll();
   return (
-    <Faq>
+    <Faq
+      variants={scrollReveal}
+      ref={element}
+      animate={controls}
+      initial="hidden"
+    >
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
@@ -19,23 +30,21 @@ const FaqSection = (props) => {
           className="question"
           title="How do I start?"
         >
-          <AnimatePresence type="crossfade">
-            <motion.div
-              className="answer"
-              layout
-              variants={fade}
-            >
-              <p>
-                Lorem ipsum dolor, sit
-                amet{" "}
-              </p>
+          <motion.div
+            className="answer"
+            layout
+            // variants={fade2}
+          >
+            <p>
+              Lorem ipsum dolor, sit
+              amet{" "}
+            </p>
 
-              <p>
-                consectetur adipisicing
-                elit. Harum fugit{" "}
-              </p>
-            </motion.div>
-          </AnimatePresence>
+            <p>
+              consectetur adipisicing
+              elit. Harum fugit{" "}
+            </p>
+          </motion.div>
         </Toggle>
         <Toggle
           className="question"
@@ -44,7 +53,7 @@ const FaqSection = (props) => {
           <motion.div
             className="answer"
             layout
-            variants={fade}
+            // variants={fade}
           >
             <p>
               Lorem ipsum dolor, sit
@@ -64,7 +73,7 @@ const FaqSection = (props) => {
           <motion.div
             className="answer"
             layout
-            variants={fade}
+            // variants={fade}
           >
             <p>
               Lorem ipsum dolor, sit
@@ -84,7 +93,7 @@ const FaqSection = (props) => {
           <motion.div
             className="answer"
             layout
-            variants={fade}
+            // variants={fade}
           >
             <p>
               Lorem ipsum dolor, sit

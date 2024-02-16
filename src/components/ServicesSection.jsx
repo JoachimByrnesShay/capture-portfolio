@@ -10,10 +10,24 @@ import {
   Hide,
 } from "../styles";
 import styled from "styled-components";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import {
+  fade,
+  fade2,
+} from "../animation";
+import { useScroll } from "./UseScroll";
 
 const ServicesSection = () => {
+  const [element, controls] =
+    useScroll();
   return (
-    <Services>
+    <Services
+      animate={controls}
+      initial="hidden"
+      variants={fade2}
+      ref={element}
+    >
       <Description>
         <h2>
           High <span>quality</span>{" "}
