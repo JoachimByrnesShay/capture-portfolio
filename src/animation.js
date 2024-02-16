@@ -41,6 +41,7 @@ export const fade = {
         transition: {ease: 'easeOut', duration: 0.75}
     }
 }
+ 
 
 
 export const photoAnim = {

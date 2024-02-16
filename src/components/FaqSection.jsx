@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { StyledAbout } from "../styles.js";
 import Toggle from "./Toggle";
+import {
+  LayoutGroup,
+  motion,
+  AnimatePresence,
+} from "framer-motion";
+import { fade } from "../animation";
 
 const FaqSection = (props) => {
   return (
@@ -8,11 +14,38 @@ const FaqSection = (props) => {
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
+      <LayoutGroup type="crossfade">
+        <Toggle
+          className="question"
+          title="How do I start?"
+        >
+          <AnimatePresence type="crossfade">
+            <motion.div
+              className="answer"
+              layout
+              variants={fade}
+            >
+              <p>
+                Lorem ipsum dolor, sit
+                amet{" "}
+              </p>
 
-      <div className="question">
-        <Toggle>
-          <h4>How do I start?</h4>
-          <div className="answer">
+              <p>
+                consectetur adipisicing
+                elit. Harum fugit{" "}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </Toggle>
+        <Toggle
+          className="question"
+          title="Daily Schedule"
+        >
+          <motion.div
+            className="answer"
+            layout
+            variants={fade}
+          >
             <p>
               Lorem ipsum dolor, sit
               amet{" "}
@@ -22,55 +55,49 @@ const FaqSection = (props) => {
               consectetur adipisicing
               elit. Harum fugit{" "}
             </p>
-          </div>
-          <div className="faq-line"></div>
+          </motion.div>
         </Toggle>
-      </div>
+        <Toggle
+          className="question"
+          title="Payment Methods?"
+        >
+          <motion.div
+            className="answer"
+            layout
+            variants={fade}
+          >
+            <p>
+              Lorem ipsum dolor, sit
+              amet{" "}
+            </p>
 
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor, sit amet{" "}
-          </p>
+            <p>
+              consectetur adipisicing
+              elit. Harum fugit{" "}
+            </p>
+          </motion.div>
+        </Toggle>
+        <Toggle
+          className="question"
+          title="What Products do you offer"
+        >
+          <motion.div
+            className="answer"
+            layout
+            variants={fade}
+          >
+            <p>
+              Lorem ipsum dolor, sit
+              amet{" "}
+            </p>
 
-          <p>
-            consectetur adipisicing
-            elit. Harum fugit{" "}
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Payment Methods?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor, sit amet{" "}
-          </p>
-
-          <p>
-            consectetur adipisicing
-            elit. Harum fugit{" "}
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>
-          What Products do you offer
-        </h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor, sit amet{" "}
-          </p>
-
-          <p>
-            consectetur adipisicing
-            elit. Harum fugit{" "}
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+            <p>
+              consectetur adipisicing
+              elit. Harum fugit{" "}
+            </p>
+          </motion.div>
+        </Toggle>
+      </LayoutGroup>
     </Faq>
   );
 };
@@ -91,10 +118,13 @@ const Faq = styled(StyledAbout)`
     width: 100%;
   }
   .question {
-    padding: 3rem 0rem;
+    padding: 2rem 0rem;
     cursor: pointer;
   }
 
+  .h4-title {
+    cursor: pointer;
+  }
   .answer {
     padding: 2rem 0rem;
     p {
