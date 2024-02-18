@@ -54,6 +54,13 @@ const GlobalStyle = createGlobalStyle`
         line-height:150%;
 
     }
+
+    html {
+        @media (max-width: 1700px){
+            font-size:80%;
+        }
+     
+    }
     
 `;
 
