@@ -16,8 +16,11 @@ function App() {
   const location = useLocation();
   return (
     <>
+      {/* <ScrollTop /> */}
       <GlobalStyle />
+
       <Nav />
+
       <AnimatePresence mode="wait">
         <Routes
           location={location}

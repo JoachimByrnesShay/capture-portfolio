@@ -13,6 +13,7 @@ import {
   sliderContainer,
 } from "../animation";
 import { useScroll } from "../components/UseScroll";
+import { ScrollTop } from "../components/ScrollTop";
 
 const OurWork = () => {
   const [element1, controls1] =
@@ -108,6 +109,7 @@ const OurWork = () => {
           />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
