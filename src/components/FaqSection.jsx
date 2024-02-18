@@ -17,7 +17,7 @@ const FaqSection = (props) => {
     useScroll();
   return (
     <Faq
-      variants={scrollReveal}
+      variants={fade}
       ref={element}
       animate={controls}
       initial="hidden"
@@ -32,8 +32,9 @@ const FaqSection = (props) => {
         >
           <motion.div
             className="answer"
-            layout
-            // variants={fade2}
+            variants={fade2}
+            initial="hidden"
+            animate="show"
           >
             <p>
               Lorem ipsum dolor, sit
@@ -52,8 +53,9 @@ const FaqSection = (props) => {
         >
           <motion.div
             className="answer"
-            layout
-            // variants={fade}
+            variants={fade2}
+            initial="hidden"
+            animate="show"
           >
             <p>
               Lorem ipsum dolor, sit
@@ -72,8 +74,9 @@ const FaqSection = (props) => {
         >
           <motion.div
             className="answer"
-            layout
-            // variants={fade}
+            variants={fade2}
+            initial="hidden"
+            animate="show"
           >
             <p>
               Lorem ipsum dolor, sit
@@ -92,8 +95,9 @@ const FaqSection = (props) => {
         >
           <motion.div
             className="answer"
-            layout
-            // variants={fade}
+            variants={fade2}
+            initial="hidden"
+            animate="show"
           >
             <p>
               Lorem ipsum dolor, sit
